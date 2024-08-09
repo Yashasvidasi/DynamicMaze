@@ -1,0 +1,229 @@
+.App {
+  display: flex;
+  margin: 0 auto; /* Center the entire app horizontally */
+  position: relative; /* Add relative positioning */
+  filter: brightness(1.4);
+}
+
+body {
+  background-color: #000000; /* Set background color to black */
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 70px);
+  grid-template-rows: repeat(8, 70px);
+  gap: 6px;
+
+  width: 600px; /* Adjust width as needed */
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 30%; /* Add margin for separation */
+}
+
+.info-container {
+  position: absolute; /* Position the container */
+  top: 32px;
+  left: 936px; /* Align to the left of the parent */
+  width: 300px; /* Occupy full width */
+  background-color: #000000; /* Set background color with transparency */
+  border-radius: 8px;
+  box-shadow: 0px 0px 100px 80px #000000;
+}
+
+.info-container p {
+  margin: 5px;
+  font-size: 150%;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.info-container img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 30px;
+}
+
+.name-container {
+  position: absolute; /* Position the container */
+  bottom: 510px;
+  left: 1118px;
+  font-weight: 500;
+  font-family: chiller;
+  font-size: 170%;
+  color: #c60202a1;
+  max-width: 400px;
+  margin-bottom: 20px;
+  text-align: center; /* Set background color with transparency */
+  white-space: nowrap;
+}
+
+@keyframes image-animation1 {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(${sol[0]}px, ${sol[1]}px);
+  }
+}
+
+.error-container {
+  position: absolute; /* Position the container */
+  top: 3px;
+  left: 189px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 600px;
+  color: red; /* Set background color with transparency */
+}
+
+.rules-container {
+  position: absolute; /* Position the container */
+  top: 466px;
+  left: 780px;
+  font-weight: 500;
+
+  font-size: 110%;
+  color: #ffffff;
+  max-width: 400px;
+  margin-bottom: 20px;
+  text-align: left; /* Set background color with transparency */
+  white-space: nowrap;
+}
+
+.vertical {
+  transform: rotate(-45deg);
+}
+.horizontal {
+  transform: rotate(45deg);
+}
+.diagonal1 {
+  transform: rotate(0deg);
+}
+.diagonal2 {
+  transform: rotate(90deg);
+}
+
+.grid-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #791f1f;
+  border: 2px solid rgba(134, 133, 133, 0.801);
+  box-shadow: 0px 0px 25px 10px #000000 inset;
+  font-size: 20px;
+  animation: none;
+}
+
+.result-container {
+  position: absolute;
+  top: 360px;
+  left: 858px;
+
+  max-width: 1800px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.result-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-right: 60px;
+  width: 120px;
+}
+
+.result-container div img {
+  height: 100px;
+  width: 100px;
+
+  margin-bottom: 20px;
+}
+
+.result-container div p {
+  margin-bottom: 2px;
+  font-size: 20px;
+  width: 200px;
+}
+
+.result-container div div {
+  text-align: center;
+  width: 200px;
+  margin-left: 50px;
+  font-size: 30px;
+}
+
+.insert-container {
+  position: absolute;
+  width: 400px;
+  left: 889px;
+  top: 200px;
+  z-index: 10;
+  text-align: center;
+  max-height: 40px;
+}
+
+.cent {
+  text-align: center;
+}
+
+.insert-container p {
+  margin-right: 10px;
+  font-size: 130%; /* Adjust spacing between text and image */
+}
+
+.tess {
+  width: 520px;
+  position: absolute;
+  top: 500px;
+  left: 878px;
+
+  font-size: 20px;
+  text-color: white;
+}
+
+.insert-container img {
+  max-width: 100px; /* Adjust as needed */
+  max-height: 100px; /* Adjust as needed */
+  margin-left: 40px;
+}
+.grid-item.entered {
+  animation: slide 1s ease-in-out; /* Apply animation on grid item enter */
+}
+
+.grid-item img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  position: absolute;
+  filter: brightness(0.8);
+  z-index: 1000;
+}
+
+.grid-item:hover {
+  cursor: pointer;
+}
+
+.btnn {
+  padding: 10px 20px;
+  font-size: 16px;
+  width: 604px;
+  margin-top: 20%;
+  height: 50px;
+  z-index: 10;
+
+  color: white;
+  border: 3px solid #560000; /* Modified border width */
+}
+
+.btnn:hover {
+  background-color: #e26363;
+}
